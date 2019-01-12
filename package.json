@@ -1,6 +1,6 @@
 {
 	"name": "@lowcodeunit/lcu-reporting",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"scripts": {
 		"deploy": "npm version patch && npm run deploy:all",
 		"deploy:all": "npm run deploy:common && parallelshell \"npm run deploy:lcu-sln-reporting\" \"npm run deploy:lcu-el-reporting-view\" \"npm run deploy:lcu-el-reporting-edit\"",
