@@ -6,6 +6,7 @@ import { LcuService } from './services/lcu.service';
 import { LcuComponent } from './controls/lcu/lcu.component';
 import { LcuDirective } from './directives/lcu.directive';
 import { LcuReportingPowerbiManagementElementComponent } from './elements/powerbi/powerbi-management/powerbi-management.component';
+import { PowerBIModel } from './models/powerbi.model';
 
 @NgModule({
   declarations: [LcuComponent, LcuDirective, LcuReportingPowerbiManagementElementComponent],
@@ -14,7 +15,7 @@ import { LcuReportingPowerbiManagementElementComponent } from './elements/powerb
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
   ],
   exports: [LcuComponent, LcuDirective, LcuReportingPowerbiManagementElementComponent],
   entryComponents: [LcuReportingPowerbiManagementElementComponent]

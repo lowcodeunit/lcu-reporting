@@ -1,3 +1,43 @@
 <h2>LcuReporting PowerbiManagement Next Steps</h2>
 
 <p>Do stuff and things!</p>
+
+<h2>To use the Reporting solution, you must be signed into a PowerBI Pro account.</h2>
+
+<!--<div *ngIf="ReportingConfig">-->
+    <form [formGroup]="PowerBIFormGroup">
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="PowerBI Username" formControlName="username">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput type="password" placeholder="PowerBI Password" formControlName="password">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="API URL" formControlName="apiUrl">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="Authority URL" formControlName="authorityUrl">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="ClientID" formControlName="clientId">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="GroupID" formControlName="groupId">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="Resource URL" formControlName="resourceUrl">
+        </mat-form-field>
+
+        <!--<div>
+            <button mat-raised-button color="primary" class="mat-button-lg" (click)="Save()" *ngIf="!Loading.Value">Save</button>
+        </div>
+    </form>
+</div> 
+
+<mat-spinner *ngIf="Loading.Value"></mat-spinner>-->
