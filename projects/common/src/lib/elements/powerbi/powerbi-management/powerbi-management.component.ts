@@ -65,6 +65,13 @@ export class LcuReportingPowerbiManagementElementComponent
   }
 
   //  API Methods
+  public Save() {
+    const powerBi = this.buildPowerBIConfigFromForm();
+
+    this.State.Loading = true;
+
+    this.reportingMgr.SavePowerBIConnection(powerBi);
+  }
 
   //  Helpers
   protected buildPowerBIConfigFromForm(): PowerBIModel {
