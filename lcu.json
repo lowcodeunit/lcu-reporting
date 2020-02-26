@@ -1,7 +1,20 @@
-{ 
-    "templates": {
-        "repository": "lowcodeunit-devkit/lcu-cli-templates-core",
-        "scope": "@lowcodeunit",
-        "workspace": "lcu-reporting"
-    }
+{
+	"templates": {
+		"repository": "lowcodeunit-devkit/lcu-cli-templates-core",
+		"scope": "@lowcodeunit",
+		"workspace": "lcu-reporting"
+	},
+	"config": {
+		"wc": [
+			"wc/lcu-reporting.lcu.js"
+		],
+		"solutions": {
+			"powerbi-management": {
+				"element": "lcu-reporting-powerbi-management-element"
+			}
+		},
+		"elements": {},
+		"data-flow": {},
+		"dependencies": {}
+	}
 }
