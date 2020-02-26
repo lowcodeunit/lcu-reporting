@@ -1,8 +1,9 @@
 {
-  "name": "@lcu/reporting",
-  "version": "0.0.7",
-  "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0"
-  }
+	"name": "@lowcodeunit/lcu-reporting-common",
+	"version": "0.0.1",
+	"peerDependencies": {
+		"@angular/common": "^9.0.2",
+		"@angular/core": "^9.0.2",
+		"tslib": "^1.10.0"
+	}
 }

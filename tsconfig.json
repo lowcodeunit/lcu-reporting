@@ -1,48 +1,36 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
-    "paths": {
-      "@lcu/reporting": [
-        "dist/common"
-      ],
-      "@lcu/reporting/*": [
-        "dist/common/*"
-      ],
-      "@lowcodeunit/lcu-sln-reporting": [
-        "dist/lcu-sln-reporting"
-      ],
-      "@lowcodeunit/lcu-sln-reporting/*": [
-        "dist/lcu-sln-reporting/*"
-      ],
-      "@lowcodeunit/lcu-el-reporting-view": [
-        "dist/lcu-el-reporting-view"
-      ],
-      "@lowcodeunit/lcu-el-reporting-view/*": [
-        "dist/lcu-el-reporting-view/*"
-      ],
-      "@lowcodeunit/lcu-el-reporting-edit": [
-        "dist/lcu-el-reporting-edit"
-      ],
-      "@lowcodeunit/lcu-el-reporting-edit/*": [
-        "dist/lcu-el-reporting-edit/*"
-      ]
-    }
-  }
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "./dist/out-tsc",
+		"sourceMap": true,
+		"declaration": false,
+		"downlevelIteration": true,
+		"experimentalDecorators": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"importHelpers": true,
+		"target": "es2015",
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"lib": [
+			"es2018",
+			"dom"
+		],
+		"paths": {
+			"@lowcodeunit/lcu-reporting-common": [
+				"dist/common/common",
+				"dist/common"
+			]
+		},
+		"noImplicitAny": true,
+		"suppressImplicitAnyIndexErrors": true
+	},
+	"angularCompilerOptions": {
+		"fullTemplateTypeCheck": true,
+		"strictInjectionParameters": true,
+		"enableIvy": false,
+		"strictTemplates": true
+	}
 }
