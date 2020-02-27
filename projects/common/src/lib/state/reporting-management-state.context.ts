@@ -2,7 +2,7 @@ import { Injectable, Injector } from '@angular/core';
 import { StateContext } from '@lcu/common';
 import { LcuModel } from '../models/lcu.model';
 import { ReportingManagementState } from './reporting-management.state';
-import { PowerBIModel } from '../models/powerbi.model';
+import { PowerBIManageModel } from '../models/powerbi-manage.model';
 
 @Injectable({
     providedIn: 'root'
@@ -15,7 +15,7 @@ export class ReportingManagementStateContext extends StateContext<ReportingManag
         super(injector);
     }
 
-    public SavePowerBIConnection(powerBi: PowerBIModel): void {
+    public SavePowerBIConnection(powerBi: PowerBIManageModel): void {
         this.Execute({
             Arguments: {
                 PowerBI: powerBi

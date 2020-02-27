@@ -2,7 +2,15 @@
   <h1>Welcome to the LCU-Starter-App</h1>
   <div fxLayout="column">
     <div fxLayout="row">
-      <lcu-reporting-powerbi-management-element></lcu-reporting-powerbi-management-element>
+      <mat-tab-group>
+        <mat-tab label="Manage">
+          <lcu-reporting-powerbi-management-element></lcu-reporting-powerbi-management-element>
+        </mat-tab>
+        <mat-tab label="View">      
+          <lcu-reporting-powerbi-view-element></lcu-reporting-powerbi-view-element>
+        </mat-tab>
+      </mat-tab-group>
+
     </div>
  
   </div>

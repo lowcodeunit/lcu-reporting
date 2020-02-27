@@ -2,7 +2,7 @@ import { Component, OnInit, Injector } from '@angular/core';
 import { LCUElementContext, LcuElementComponent } from '@lcu/common';
 // import { PowerBIConfig, ReportingConfig } from '@lcu/apps';
 import { FormGroup, FormControl } from '@angular/forms';
-import { PowerBIModel } from '../../../models/powerbi.model';
+import { PowerBIManageModel } from '../../../models/powerbi-manage.model';
 import { ReportingManagementStateContext } from '../../../state/reporting-management-state.context';
 import { inject } from '@angular/core/testing';
 import { ReportingManagementState } from '../../../state/reporting-management.state';
@@ -74,7 +74,7 @@ export class LcuReportingPowerbiManagementElementComponent
   }
 
   //  Helpers
-  protected buildPowerBIConfigFromForm(): PowerBIModel {
+  protected buildPowerBIConfigFromForm(): PowerBIManageModel {
     return {
       Username: this.PowerBIFormGroup.get('username').value, // || this.CurrentPowerBIConfig.Username,
       Password: this.PowerBIFormGroup.get('password').value, // || this.CurrentPowerBIConfig.Password,
@@ -86,7 +86,7 @@ export class LcuReportingPowerbiManagementElementComponent
     };
   }
 
-  protected setPowerBIFormFromConfig(powerBi: PowerBIModel) {
+  protected setPowerBIFormFromConfig(powerBi: PowerBIManageModel) {
     this.PowerBIFormGroup.controls.username.setValue(powerBi.Username);
 
     this.PowerBIFormGroup.controls.password.setValue(powerBi.Password);

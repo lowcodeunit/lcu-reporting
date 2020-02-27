@@ -6,6 +6,7 @@ import { environment } from '../environments/environment';
 import {
   LcuReportingModule,
   LcuReportingPowerbiManagementElementComponent,
+  LcuReportingPowerbiViewElementComponent,
   SELECTOR_LCU_REPORTING_POWERBI_MANAGEMENT_ELEMENT
 } from '@lowcodeunit/lcu-reporting-common';
 import { createCustomElement } from '@angular/elements';
@@ -33,6 +34,10 @@ export class AppModule implements DoBootstrap {
     const powerbiManagement = createCustomElement(
       LcuReportingPowerbiManagementElementComponent,
       { injector: this.injector }
+    )
+    const powerbiView = createCustomElement(
+      LcuReportingPowerbiViewElementComponent,
+        {injector: this.injector}    
     );
 
     customElements.define(

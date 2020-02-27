@@ -6,15 +6,17 @@ import { LcuService } from "./services/lcu.service";
 import { LcuComponent } from "./controls/lcu/lcu.component";
 import { LcuDirective } from "./directives/lcu.directive";
 import { LcuReportingPowerbiManagementElementComponent } from "./elements/powerbi/powerbi-management/powerbi-management.component";
-import { PowerBIModel } from "./models/powerbi.model";
+import { PowerBIManageModel } from "./models/powerbi-manage.model";
 import { ReportingManagementStateContext } from "./state/reporting-management-state.context";
 import { ReportingManagementState } from './state/reporting-management.state';
+import { LcuReportingPowerbiViewElementComponent } from './elements/powerbi/powerbi-view/powerbi-view.component';
 
 @NgModule({
   declarations: [
     LcuComponent,
     LcuDirective,
     LcuReportingPowerbiManagementElementComponent,
+    LcuReportingPowerbiViewElementComponent,
   ],
   imports: [
     FathymSharedModule,
@@ -26,15 +28,16 @@ import { ReportingManagementState } from './state/reporting-management.state';
   exports: [
     LcuComponent,
     LcuDirective, 
-    LcuReportingPowerbiManagementElementComponent
+    LcuReportingPowerbiManagementElementComponent,
+    LcuReportingPowerbiViewElementComponent,
   ],
-  entryComponents: [LcuReportingPowerbiManagementElementComponent]
+  entryComponents: [LcuReportingPowerbiManagementElementComponent, LcuReportingPowerbiViewElementComponent,]
 })
 export class LcuReportingModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: LcuReportingModule,
-      providers: [ReportingManagementStateContext, LcuService]
+      providers: [ReportingManagementStateContext, LcuService, LCUServiceSettings]
     };
   }
 }

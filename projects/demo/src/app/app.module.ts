@@ -9,6 +9,8 @@ import { HomeComponent } from './controls/home/home.component';
 import { DocumentationComponent } from './controls/documentation/documentation.component';
 import { LcuDocumentationModule } from '@lowcodeunit/lcu-documentation-common';
 import { LcuReportingModule } from '@lowcodeunit/lcu-reporting-common';
+import { environment } from '../environments/environment';
+import { ReportingManagementStateContext } from 'projects/common/src/lcu.api';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { LcuReportingModule } from '@lowcodeunit/lcu-reporting-common';
     LcuDocumentationModule.forRoot(),
     LcuReportingModule.forRoot()
   ],
-  providers: [LCUServiceSettings],
+  providers: [ReportingManagementStateContext,{
+    provide: LCUServiceSettings,
+    useValue: FathymSharedModule.DefaultServiceSettings(environment)
+  }],
   bootstrap: [AppComponent],
   exports: [LcuReportingModule]
 })

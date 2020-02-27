@@ -1,4 +1,4 @@
-export class PowerBIModel {
+export class PowerBIManageModel {
     public Username?: string;
     public Password?: string;
     public ApiUrl?: string;
