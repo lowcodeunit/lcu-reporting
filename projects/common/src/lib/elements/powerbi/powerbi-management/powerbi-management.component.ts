@@ -5,7 +5,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { PowerBIModel } from '../../../models/powerbi.model';
 import { ReportingManagementStateContext } from '../../../state/reporting-management-state.context';
 import { inject } from '@angular/core/testing';
-import { ReportingManagementState } from '../../../state/reoprting-management.state';
+import { ReportingManagementState } from '../../../state/reporting-management.state';
 
 export class LcuReportingPowerbiManagementElementState {}
 

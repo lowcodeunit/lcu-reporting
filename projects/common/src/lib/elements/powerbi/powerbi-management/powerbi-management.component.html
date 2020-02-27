@@ -6,7 +6,7 @@
   To use the Reporting solution, you must be signed into a PowerBI Pro account.
 </h2>
 
-<!--<div *ngIf="ReportingConfig">-->
+
 <form [formGroup]="PowerBIFormGroup" (ngSubmit)="Save()" *ngIf="!State.Loading">
   <mat-form-field class="mat-form-field-flex">
     <input matInput placeholder="PowerBI Username" formControlName="username" />
@@ -45,13 +45,8 @@
     <input matInput placeholder="Resource URL" formControlName="resourceUrl" />
   </mat-form-field>
 
-  <!--<div>
-            <button mat-raised-button color="primary" class="mat-button-lg" *ngIf="!Loading.Value">Save</button>
-        </div>
-    </form>
-</div>
--->
-
+  <div>
+    <button mat-raised-button color="primary" class="mat-button-lg" *ngIf="!State.Loading">Save</button>
+  </div>
 </form>
-
 <mat-spinner *ngIf="State.Loading"></mat-spinner>
