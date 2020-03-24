@@ -20,14 +20,14 @@ export class ReportingManagementStateContext extends StateContext<ReportingManag
             Arguments: {
                 PowerBI: powerBi
             },
-            Type: 'SavePowerBIConnection'
+            Type: 'SavePowerBIConnection' 
         });
     }
 
     protected async loadStateKey() {
         return 'main';
     }
-
+ 
     protected async loadStateName() {
         return 'lcu';
     }
