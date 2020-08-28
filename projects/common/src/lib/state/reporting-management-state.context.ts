@@ -24,11 +24,11 @@ export class ReportingManagementStateContext extends StateContext<ReportingManag
         });
     }
 
-    protected async loadStateKey() {
+    protected loadStateKey(): string {
         return 'main';
     }
 
-    protected async loadStateName() {
+    protected loadStateName(): string {
         return 'lcu';
     }
 }

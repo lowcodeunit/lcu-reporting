@@ -37,11 +37,11 @@ var comps = [];
   providers: []
 })
 export class UIModule {
-  //	Constructors
+  // Constructors
   constructor() {
   }
 
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<UIModule> {
     return {
       ngModule: UIModule,
       providers: [...services]
