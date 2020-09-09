@@ -43,11 +43,11 @@ export class ReportingViewStateContext extends StateContext<ReportingViewState> 
         });
     }
 
-    protected loadStateKey():string {
+    protected loadStateKey(): string {
         return 'main';
     }
 
-    protected loadStateName():string {
+    protected loadStateName(): string {
         return 'lcu';
     }
 }

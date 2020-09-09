@@ -34,7 +34,7 @@ import { LcuReportingPowerbiViewElementComponent } from './elements/powerbi/powe
   entryComponents: [LcuReportingPowerbiManagementElementComponent, LcuReportingPowerbiViewElementComponent,]
 })
 export class LcuReportingModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<LcuReportingModule> {
     return {
       ngModule: LcuReportingModule,
       providers: [ReportingManagementStateContext, LcuService, LCUServiceSettings]
