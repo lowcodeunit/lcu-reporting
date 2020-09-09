@@ -20,7 +20,7 @@ export class ReportingManagementStateContext extends StateContext<ReportingManag
             Arguments: {
                 PowerBI: powerBi
             },
-            Type: 'SavePowerBIConnection'
+            Type: 'SavePowerBIConnection' 
         });
     }
 
