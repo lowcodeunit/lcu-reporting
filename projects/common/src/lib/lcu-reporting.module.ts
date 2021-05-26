@@ -2,25 +2,26 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FathymSharedModule, MaterialModule } from '@lcu/common';
-import { LcuService } from './services/lcu.service';
+import { LcuReportingPowerBiViewElementComponent } from './elements/power-bi/power-bi-view/power-bi-view.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [LcuReportingPowerBiViewElementComponent],
   imports: [
     FathymSharedModule,
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    // LazyElementModule,
   ],
-  exports: [],
-  entryComponents: []
+  exports: [LcuReportingPowerBiViewElementComponent],
+  entryComponents: [LcuReportingPowerBiViewElementComponent]
 })
 export class LcuReportingModule {
   static forRoot(): ModuleWithProviders<LcuReportingModule> {
     return {
       ngModule: LcuReportingModule,
-      providers: [LcuService]
+      providers: []
     };
   }
 }
