@@ -1,7 +1,0 @@
-{ 
-    "templates": {
-        "repository": "lowcodeunit-devkit/lcu-cli-templates-core",
-        "scope": "@lowcodeunit",
-        "workspace": "lcu-reporting"
-    }
-}
